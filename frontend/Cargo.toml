@@ -1,0 +1,13 @@
+[package]
+name = "feedback-frontend"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+
+[dependencies]
+gloo-net = "0.6"
+leptos = { version = "0.7", features = ["csr"] }
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+web-sys = { version = "0.3", features = ["Window", "Location"] }

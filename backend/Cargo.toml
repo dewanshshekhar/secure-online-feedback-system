@@ -1,0 +1,21 @@
+[package]
+name = "feedback-backend"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+publish = false
+
+[dependencies]
+axum = "0.8"
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "net", "signal"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+uuid = { version = "1", features = ["v4", "serde"] }
+sqlx = { version = "0.8", default-features = false, features = ["postgres", "runtime-tokio-rustls", "uuid"] }
+sha2 = "0.10"
+subtle = "2"
+
+[dev-dependencies]
+serde_json = "1"
+tower = { version = "0.5", features = ["util"] }
